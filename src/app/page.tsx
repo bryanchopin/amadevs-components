@@ -1,5 +1,6 @@
 import BtnHoverDelete from "@/app/components/BtnHoverDelete";
 import BtnChangeDelete from "@/app/components/BtnChangeDelete";
+import PixelCanvas from "@/app/components/PixelCanvas";
 
 export default function Home() {
   return (
@@ -22,7 +23,8 @@ export default function Home() {
           <BtnChangeDelete />
         </div>
         <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center p-4">
-          <div className="w-full h-full flex items-center justify-center border border-blue-500 rounded-lg">
+          <div className="w-full h-full flex items-center justify-center border border-blue-500 rounded-lg bg-blue-800">
+            <PixelCanvas />
           </div>
         </div>
         <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center">
