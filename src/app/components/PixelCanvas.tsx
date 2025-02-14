@@ -1,7 +1,5 @@
-
 'use client';
 
-// PixelCanvas.tsx
 import React, { useEffect, useRef, useCallback } from 'react';
 
 interface PixelProps {
@@ -128,9 +126,8 @@ const PixelCanvas: React.FC<PixelCanvasProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pixelsRef = useRef<Pixel[]>([]);
   const animationFrameRef = useRef<number | null>(null);
-  const timePreviousRef = useRef<number>(performance.now());
+  const timePreviousRef = useRef<number>(0);
   const timeInterval = 1000 / 60;
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const init = useCallback(() => {
     const canvas = canvasRef.current;
@@ -152,12 +149,12 @@ const PixelCanvas: React.FC<PixelCanvasProps> = ({
     for (let x = 0; x < width; x += gap) {
       for (let y = 0; y < height; y += gap) {
         const color = colors[Math.floor(Math.random() * colors.length)];
-        const delay = reducedMotion ? 0 : getDistanceToCanvasCenter(x, y, width, height);
+        const delay = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : getDistanceToCanvasCenter(x, y, width, height);
         newPixels.push(new Pixel({ canvas, context: ctx, x, y, color, speed: speed * 0.001, delay }));
       }
     }
     pixelsRef.current = newPixels;
-  }, [colors, gap, speed, reducedMotion]);
+  }, [colors, gap, speed]);
 
   const getDistanceToCanvasCenter = (x: number, y: number, width: number, height: number): number => {
     const dx = x - width / 2;
@@ -190,11 +187,15 @@ const PixelCanvas: React.FC<PixelCanvasProps> = ({
   }, [timeInterval]);
 
   useEffect(() => {
-    init();
-    animationFrameRef.current = requestAnimationFrame(animate);
+    if (typeof window !== 'undefined') {
+      init();
+      animationFrameRef.current = requestAnimationFrame(animate);
+    }
 
     return () => {
-      cancelAnimationFrame(animationFrameRef.current!);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, [init, animate]);
 
