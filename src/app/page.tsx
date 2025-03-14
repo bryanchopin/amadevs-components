@@ -1,7 +1,7 @@
 import BtnHoverDelete from "@/app/components/BtnHoverDelete";
 import BtnChangeDelete from "@/app/components/BtnChangeDelete";
 import PixelCanvas from "@/app/components/PixelCanvas";
-import ChatContainer from "./components/ChatHuggingFaceModels/chat-container";
+// import ChatContainer from "./components/ChatHuggingFaceModels/chat-container";
 
 export default function Home() {
   return (
