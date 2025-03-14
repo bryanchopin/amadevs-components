@@ -20,19 +20,19 @@ export default function Home() {
 
       {/* Contenedor del grid */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
-        <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[450px] flex items-center justify-center">
+        {/* <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center">
           <ChatContainer />
+        </div> */}
+        <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center p-4">
+          <div className="w-full h-full flex items-center justify-center border border-blue-500 rounded-lg bg-blue-800">
+            <PixelCanvas />
+          </div>
         </div>
         <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center">
           <BtnHoverDelete />
         </div>
         <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center">
           <BtnChangeDelete />
-        </div>
-        <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center p-4">
-          <div className="w-full h-full flex items-center justify-center border border-blue-500 rounded-lg bg-blue-800">
-            <PixelCanvas />
-          </div>
         </div>
         <div className="col-span-1 md:col-span-2 row-span-2 border border-gray-300 relative h-[150px] flex items-center justify-center">
           {/* Aquí puedes agregar otro componente */}
