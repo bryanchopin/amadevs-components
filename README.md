@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">🎨 Amadevs Components</h1>
 
-## Getting Started
+<p align="center">
+  Una colección de componentes reutilizables y personalizables construidos con <strong>React</strong> y <strong>Tailwind CSS</strong>, pensados para acelerar el desarrollo de interfaces modernas, accesibles y consistentes.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="#acerca-del-proyecto"><strong>Acerca del Proyecto</strong></a> ·
+  <a href="#comenzar"><strong>Comenzar</strong></a> ·
+  <a href="#documentación-y-aprendizaje"><strong>Documentación y Aprendizaje</strong></a> ·
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Acerca del Proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Amadevs Components** surge de la necesidad de contar con una base sólida de componentes frontend que sean:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Visualmente atractivos y modernos.
+- Totalmente personalizables con clases de Tailwind CSS.
+- Fáciles de integrar en cualquier proyecto con React y Next.js.
+- Diseñados bajo buenas prácticas de accesibilidad y responsividad.
 
-## Learn More
+Esta librería pretende ser una caja de herramientas visuales para desarrolladores que deseen enfocarse más en la lógica y menos en el diseño, sin comprometer calidad o estilo.
 
-To learn more about Next.js, take a look at the following resources:
+### 🎯 Finalidad
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Ahorrar tiempo de desarrollo al reutilizar componentes listos para producción.
+- Mantener coherencia visual entre diferentes proyectos.
+- Fomentar el uso de Tailwind CSS como sistema de diseño robusto.
+- Empoderar a desarrolladores junior e intermedios con buenas prácticas de UI/UX.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💡 Motivación
 
-## Deploy on Vercel
+Muchos proyectos pequeños y medianos carecen de una base de componentes consistente, lo que lleva a interfaces desordenadas o poco profesionales. **Amadevs Components** busca resolver esto ofreciendo piezas listas para usar que se vean bien y funcionen bien desde el inicio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🌍 Visión
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Crear una comunidad alrededor de un sistema de componentes open source mantenido activamente y enriquecido por desarrolladores reales en contextos reales. Queremos democratizar el diseño web bien hecho, sin depender de soluciones propietarias.
+
+---
